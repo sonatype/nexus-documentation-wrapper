@@ -1,0 +1,5 @@
+rsync-excludes
+template.py
+apply-template.sh
+template.html
+.git
