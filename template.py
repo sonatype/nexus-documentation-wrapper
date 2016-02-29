@@ -11,15 +11,25 @@ parser = argparse.ArgumentParser(description='Script to wrap produces html into 
 parser.add_argument('-p','--path',help='Path where the replacement should be done', required=True)
 parser.add_argument('-t','--title',help='Title of the documentation', required=True)
 parser.add_argument('-g','--gsid',help='Google Search ID', required=True)
+parser.add_argument('-s','--searchdisplay',help='CSS display style value for the search box, defaults to none (=invisible)', required=False)
+parser.add_argument('-v','--version',help='The version of Nexus the documents are for', required=True)
+parser.add_argument('-i','--indexpath',help='Relative path reference to the index for navigation', required=True)
+
 args = parser.parse_args()
 path = args.path
 bookTitle = args.title
 gsid = args.gsid
+searchdisplay = args.searchdisplay
+version=args.version
+toindex=args.indexpath
+googleSearchToken = gsid
 
 filename = inspect.getframeinfo(inspect.currentframe()).filename
 wrapperpath = os.path.dirname(os.path.abspath(filename))
 
-print "wrapperpath" + wrapperpath
+print ("Applying template processing to ") + path
+print ("  Wrapper path: ") + wrapperpath
+print ("  Path to index set to: ") + toindex
 
 for infile in glob.glob( os.path.join(path, '*.html') ):
   print "Reading File: " + infile

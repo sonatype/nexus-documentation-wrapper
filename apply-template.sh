@@ -9,17 +9,23 @@ dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 path=$1
 title=$2
 gsid=$3
+searchDisplay=$4
+version=$5
+indexpath=$6
 
-echo "Applying documentation-wrapper template in ${dir}" 
+echo "Applying nexus-documentation-wrapper template in ${dir}" 
 echo "  path: ${path}"
 echo "  title: ${title}"
 echo "  gsid: ${gsid}"
+echo "  searchDisplay: ${searchDisplay}"
+echo "  version: ${version}"
+echo "  indexpath: ${indexpath}"
 
 # copy all content apart from the excluded stuff ;-) 
 echo "  Copying template resources" 
 rsync -a --exclude-from="$dir/rsync-excludes" $dir/* $path
 
 echo "  Applying website template"
-python "${dir}/template.py" -p "${path}" -t "${title}" -g "${gsid}"
+python "${dir}/template.py" -p "${path}" -t "${title}" -g "${gsid}" -s "${searchDisplay}" -v "${version}" -i "${indexpath}"
 
 #cp target/site/reference/index.html target/site/reference/public-book.html
