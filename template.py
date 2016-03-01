@@ -14,6 +14,8 @@ parser.add_argument('-g','--gsid',help='Google Search ID', required=True)
 parser.add_argument('-s','--searchdisplay',help='CSS display style value for the search box, defaults to none (=invisible)', required=False)
 parser.add_argument('-v','--version',help='The version of Nexus the documents are for', required=True)
 parser.add_argument('-i','--indexpath',help='Relative path reference to the index for navigation', required=True)
+parser.add_argument('--product',help='Product', required=True)
+
 
 args = parser.parse_args()
 path = args.path
@@ -22,10 +24,14 @@ gsid = args.gsid
 searchdisplay = args.searchdisplay
 version=args.version
 toindex=args.indexpath
-googleSearchToken = gsid
+googleSearchToken = args.gsid
+product = args.product
 
 filename = inspect.getframeinfo(inspect.currentframe()).filename
 wrapperpath = os.path.dirname(os.path.abspath(filename))
+
+if not searchdisplay:
+  searchdisplay = "none"
 
 print ("Applying template processing to ") + path
 print ("  Wrapper path: ") + wrapperpath
@@ -41,8 +47,5 @@ for infile in glob.glob( os.path.join(path, '*.html') ):
     t = airspeed.Template(open( wrapperpath + "/template.html", "r").read())
     title = body[ body.index( "<title>" ) + 7 : body.rindex("</title>") ]
     body = body[ body.index( "<body>") + 6 : body.rindex("</body>") ]
-    if "index.html" in infile:
-      print ("Replacing bookTitle  - replacing with ToC" )
-      title = "Table of Contents"
       
   open(infile, "w").write( t.merge(locals()) );

@@ -6,26 +6,31 @@ set -e
 set -u
 
 dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-path=$1
-title=$2
-gsid=$3
-searchDisplay=$4
-version=$5
-indexpath=$6
-
 echo "Applying nexus-documentation-wrapper template in ${dir}" 
+
+path=$1
+properties=$2
+searchDisplay=$3
+indexpath=$4
+
 echo "  path: ${path}"
-echo "  title: ${title}"
-echo "  gsid: ${gsid}"
 echo "  searchDisplay: ${searchDisplay}"
-echo "  version: ${version}"
 echo "  indexpath: ${indexpath}"
+
+echo "Reading $properties"
+source $properties
+ 
+echo "  product: ${product}"
+echo "  bookTitle: ${bookTitle}"
+echo "  googleSearchToken: ${googleSearchToken}"
+echo "  version: ${version}"
+
 
 # copy all content apart from the excluded stuff ;-) 
 echo "  Copying template resources" 
 rsync -a --exclude-from="$dir/rsync-excludes" $dir/* $path
 
 echo "  Applying website template"
-python "${dir}/template.py" -p "${path}" -t "${title}" -g "${gsid}" -s "${searchDisplay}" -v "${version}" -i "${indexpath}"
+python "${dir}/template.py" -p "${path}" -t "${bookTitle}" -g "${googleSearchToken}" -s "${searchDisplay}" -v "${version}" -i "${indexpath}" --product "${product}"
 
 #cp target/site/reference/index.html target/site/reference/public-book.html
