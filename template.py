@@ -15,20 +15,26 @@ parser.add_argument('-s','--searchdisplay',help='CSS display style value for the
 parser.add_argument('-v','--version',help='The version of Nexus the documents are for', required=True)
 parser.add_argument('-i','--indexpath',help='Relative path reference to the index for navigation', required=True)
 parser.add_argument('--product',help='Product', required=True)
+parser.add_argument('--doctype',help='Doctype tag', required=False)
 
 
 args = parser.parse_args()
 path = args.path
 bookTitle = args.title
-gsid = args.gsid
 searchdisplay = args.searchdisplay
 version=args.version
 toindex=args.indexpath
 googleSearchToken = args.gsid
 product = args.product
+doctype = args.doctype
 
 filename = inspect.getframeinfo(inspect.currentframe()).filename
 wrapperpath = os.path.dirname(os.path.abspath(filename))
+
+if doctype=="article":
+   bodyTag='<body class="article">'
+else:
+   bodyTag='<body>'
 
 if not searchdisplay:
   searchdisplay = "none"
@@ -46,6 +52,6 @@ for infile in glob.glob( os.path.join(path, '*.html') ):
   else:
     t = airspeed.Template(open( wrapperpath + "/template.html", "r").read())
     title = body[ body.index( "<title>" ) + 7 : body.rindex("</title>") ]
-    body = body[ body.index( "<body>") + 6 : body.rindex("</body>") ]
+    body = body[ body.index( bodyTag) + len(bodyTag) : body.rindex("</body>") ]
       
   open(infile, "w").write( t.merge(locals()) );
