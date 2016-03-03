@@ -37,7 +37,7 @@
       </div>
   </div>
   <div class="left-sidebar" id="accordion">
-    <div class="sidebarTitle">Download Software</div>
+    <div class="sidebarTitle" id="nxDocsSectDownload">Download Software</div>
     <div class="sidebarSection">
       <div class="sidebar"><a href="http://www.sonatype.org/nexus/go/" target="_blank">Nexus Repository Manager OSS</a></div>
       <div class="sidebar"><a href="http://www.sonatype.com/nexus/free-trial" target="_blank">Nexus Repository Manager Trial</a></div>
@@ -45,7 +45,7 @@
       <div class="sidebar"><a href="https://support.sonatype.com/entries/23756203" target="_blank">Nexus IQ Server</a></div>
     </div>
     
-    <div class="sidebarTitle">Nexus Repository Manager</div>
+    <div class="sidebarTitle" id="nxDocsSectNxrm">Nexus Repository Manager</div>
     <div class="sidebarSection">
       <div class="sidebar"><a href="${toindex}nexus-book/index.html">Index</a></div>
       <div class="sidebar">Version 3.0: <a href="${toindex}nexus-book/3.0/reference/index.html">HTML</a> | <a href="${toindex}nexus-book/3.0/pdf/nxbook-pdf.pdf">PDF</a></div>
@@ -57,7 +57,7 @@
       <div class="sidebar"><a href="http://www.sonatype.com/nexus/compare-repos" target="_blank">Compare Editions</a></div>
     </div>
     
-    <div class="sidebarTitle">&nbsp;&nbsp;&nbsp; - Version 3.0</div>
+    <div class="sidebarTitle" id="nxDocsSectNxrm3">&nbsp;&nbsp;&nbsp; - Version 3.0</div>
     <div class="sidebarSection">
       <div class="sidebar"><a href="${toindex}nexus-book/3.0/reference/index.html">Index</a></div>
       <div class="sidebar"><a href="${toindex}nexus-book/3.0/reference/preface.html">Preface</a></div>
@@ -77,7 +77,7 @@
       <div class="sidebar"><a href="${toindex}nexus-book/3.0/reference/bundle-development.html">Bundle Development</a></div>
     </div>
 
-    <div class="sidebarTitle">&nbsp;&nbsp;&nbsp; - Version 2.12</div>
+    <div class="sidebarTitle" id="nxDocsSectNxrm2">&nbsp;&nbsp;&nbsp; - Version 2.12</div>
     <div class="sidebarSection">
       <div class="sidebar"><a href="${toindex}nexus-book/reference/index.html">Index</a></div>
       <div class="sidebar"><a href="${toindex}nexus-book/reference/intro.html">Introduction</a></div>
@@ -107,7 +107,7 @@
       <div class="sidebar"><a href="${toindex}nexus-book/reference/community.html">Community</a></div>
     </div>
     
-    <div class="sidebarTitle">Nexus IQ Server</div>
+    <div class="sidebarTitle" id="nxDocsSectIq">Nexus IQ Server</div>
     <div class="sidebarSection">
       <div class="sidebar"><a href="${toindex}sonatype-clm-book/html/index.html">Index</a></div>
       <div class="sidebar">Version 1.19: <a href="${toindex}sonatype-clm-book/1.19/html/clm-book/index.html">HTML</a> | <a href="${toindex}sonatype-clm-book/1.19/pdf/book-clm.pdf">PDF</a></div>
@@ -116,7 +116,7 @@
       <div class="sidebar"><a href="${toindex}sonatype-clm-book/html/release-notes/index.html">Release Notes</a></div>
     </div>
           
-    <div class="sidebarTitle">&nbsp;&nbsp;&nbsp; - Version 1.19</div>
+    <div class="sidebarTitle" id="nxDocsSectIqDetail">&nbsp;&nbsp;&nbsp; - Version 1.19</div>
       <div class="sidebarSection">
       <div class="sidebar"><a href="${toindex}sonatype-clm-book/html/clm-book/server-upgrades.html">Upgrade Instructions</a></div>
       <div class="sidebar"><a href="${toindex}sonatype-clm-book/html/clm-book/requirements-installation.html">Installation</a></div>
@@ -140,7 +140,7 @@
       <div class="sidebar"><a href="${toindex}sonatype-clm-book/html/clm-book/chapter-clm-sonarqube.html">SonarQube</a></div>
     </div>
       
-    <div class="sidebarTitle">Other Resources</div>
+    <div class="sidebarTitle" id="nxDocsSectOther">Other Resources</div>
     <div class="sidebarSection">
      <div class="sidebar"><a href="http://support.sonatype.com/" target="_blank">Sonatype Support</a></div>
      <div class="sidebar"><a href="http://www.sonatype.org/nexus/" target="_blank">Nexus Community</a></div>
@@ -176,15 +176,63 @@
   <!-- Table of Contents rendered by Javascript -->
   <!-- <script src="js/asciidoc-toc.js" type="text/javascript"></script>  -->
   <script type="text/javascript" src="js/addtoany-page.js"></script>
+  <script type="text/javascript" src="js/js.cookie.js"></script>
   <script type="text/javascript">
+  function setCookie(key, value) {
+	  Cookies.set(key, value, { expires: 7 });
+  }
+
+  function getCookie(key) {
+      var value = Cookies.get(key);
+      return value;
+  }
+  
   $(document).ready(function($) {
-    $('#accordion').find('.sidebarTitle').click(function(){
-
+    // read status of all titles from cookie array, 
+    // if none found, set to expanded false
+    $('#accordion').find('.sidebarTitle').each(
+    		  function() {
+    			  showSection = getCookie(this.id);
+    			  if (showSection == "show" ) {
+    			        $(this).next().show();
+  			      } else {
+    			        //$(this).next().slideToggle('fast');
+    			        $(this).next().hide();
+    			    }
+    			}		
+    );
+    // expanded and contract as set in the array
+    
+	  // set onClick event for all titles
+	  $('#accordion').find('.sidebarTitle').click(function(){
       //Expand or collapse this panel
+      
+      if($(this).next().is(':visible')) {
+    	  setCookie(this.id, "hide")
+      } else {
+        setCookie(this.id, "show")
+      }
       $(this).next().slideToggle('fast');
-
+      
+      
+      
+//       showSection = getCookie(this.id);
+//       if (showSection == "show" ) {
+//     	  $(this).next().show();
+//     	  setCookie(this.id, "show")
+//       } else {
+//     	  //$(this).next().slideToggle('fast');
+//     	  $(this).next().hide();
+//     	  setCookie(this.id, "hide");
+//       }
+      
+      //
+        // change cookie for this element to other status 
+      
       //Hide the other panels
       //$(".sidebarSection").not($(this).next()).slideUp('fast');
+            
+      
 
     });
   });
