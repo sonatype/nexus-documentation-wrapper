@@ -395,10 +395,12 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
 	margin:0px;
 	font-weight:bold;
 	vertical-align:text-top;
-    color:#f5c649;
-  	text-transform:uppercase;
-  	border-left: 3px solid #f5c649;
-   padding-left: 20px;	
+  color:#f5c649;
+  text-transform:uppercase;
+  border-left: 3px solid #f5c649;
+  padding-left: 20px;
+  cursor: pointer;
+  background:#222222;
 }
 .left-sidebar .sidebarTitle a {
 	color:#f5c649;
@@ -446,6 +448,16 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
 	color:#ffffff;
 	text-decoration:none;
 }
+
+.sidebarSection {
+ display: none;
+}
+.sidebarSection.default {
+ display: block;
+}
+
+
+
 
 /* --- Single Page Body Content Styling --- */
 
