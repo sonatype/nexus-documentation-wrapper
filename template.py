@@ -16,7 +16,7 @@ parser.add_argument('-v','--version',help='The version of Nexus the documents ar
 parser.add_argument('-i','--indexpath',help='Relative path reference to the index for navigation', required=True)
 parser.add_argument('--product',help='Product', required=True)
 parser.add_argument('--doctype',help='Doctype tag', required=False)
-
+parser.add_argument('--searchurl',help='URL for google search tag', required=False)
 
 args = parser.parse_args()
 path = args.path
@@ -27,6 +27,9 @@ toindex=args.indexpath
 googleSearchToken = args.gsid
 product = args.product
 doctype = args.doctype
+searchUrl = args.searchurl
+
+print (" searchUrl ") + searchUrl
 
 filename = inspect.getframeinfo(inspect.currentframe()).filename
 wrapperpath = os.path.dirname(os.path.abspath(filename))

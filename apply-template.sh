@@ -26,11 +26,12 @@ echo "  product: ${product}"
 echo "  bookTitle: ${bookTitle}"
 echo "  googleSearchToken: ${googleSearchToken}"
 echo "  version: ${version}"
+echo "  searchUrl: ${searchUrl}" 
 
 # copy all content apart from the excluded stuff ;-) 
 echo "  Copying template resources" 
 rsync -a --exclude-from="$dir/rsync-excludes" $dir/* $path
 
 echo "  Applying website template"
-python "${dir}/template.py" -p "${path}" -t "${bookTitle}" -g "${googleSearchToken}" -s "${searchDisplay}" -v "${version}" -i "${indexpath}" --product "${product}" --doctype $doctype
+python "${dir}/template.py" -p "${path}" -t "${bookTitle}" -g "${googleSearchToken}" -s "${searchDisplay}" -v "${version}" -i "${indexpath}" --product "${product}" --doctype $doctype --searchurl "$searchUrl"
 #cp target/site/reference/index.html target/site/reference/public-book.html
