@@ -237,10 +237,11 @@ div.content + div.title {
 }
 
 .navbar .book-title {
-	margin-left:20px;
-	padding-left:20px;
-	border-left:1px solid #ccc;	
+	margin-left: 30px;
+	padding-left: 30px;
 	color:#666;
+	font-weight: bold;
+	font-size: 24px;
 }
 .navbar-inner {
 	min-height:40px;
