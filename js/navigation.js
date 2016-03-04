@@ -1,10 +1,15 @@
 // navigation.js
 // Manfred Moser
-// Requirements: jquery, js.cookie
+// Requirements: 
+// libraries: jquery, js.cookie
+// css elements in page: accordion with nested sidebarTitle div and following content divs
+// see template.html and clmBook.css
 
 // Accordion style navigation that keeps track of hide/show status for each section
 // via cookies so that each individual static page can read the state of the
 // section in the nav and display them correctly
+
+
 
 function setCookie(key, value) {
 	Cookies.set(key, value, { expires: 3 });
