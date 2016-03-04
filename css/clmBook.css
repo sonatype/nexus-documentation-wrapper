@@ -270,8 +270,8 @@ div.content + div.title {
 *[id]:before {
   display: block;
   content: " ";
-  margin-top: -55px;
-  height: 55px;
+  margin-top: -65px;
+  height: 65px;
   visibility: hidden;
 }
 
@@ -391,14 +391,14 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
 	border:0px;
 }
 .left-sidebar .sidebarTitle {
-	padding:5px;
+	padding:7px;
 	margin:0px;
 	font-weight:bold;
 	vertical-align:text-top;
   color:#f5c649;
   text-transform:uppercase;
   border-left: 3px solid #f5c649;
-  padding-left: 20px;
+  padding-left: 10px;
   cursor: pointer;
   background:#222222;
 }
@@ -411,18 +411,17 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
 	color:#cc9900;
 	text-decoration:underline;
 }
+
 .left-sidebar .sidebar {
-	padding-left:20px;
+	padding-left:5px;
 	padding-right:5px;
 	margin-left:20px;	
 	margin-right:.3em;
-	margin-top:7px;
+	margin-top:3px;
+	margin-bottom:3px;
 	line-height:19px;
 	vertical-align:text-top;
   color:#ffffff;
-	background-position:0px 2px;
-	background-repeat:no-repeat;
-	background-image:url("../images/glyphicons_book.png");
 }
 .left-sidebar .sidebar a, a:active, a:focus {
 	color:#ffffff;
@@ -434,7 +433,7 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
 	text-decoration:underline;
 }
 .left-sidebar .sidebarServer {
-	padding-left:0px;
+	padding-left:5px;
 	padding-right:5px;
 	margin-left:20px;	
 	margin-right:.3em;
@@ -451,6 +450,7 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
 
 .sidebarSection {
  display: none;
+ padding: 7px;
 }
 .sidebarSection.default {
  display: block;
