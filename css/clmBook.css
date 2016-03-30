@@ -87,6 +87,11 @@ h3 {
 	color: #333333;
 } */
 
+img {
+ max-width: none;
+ max-height: none;
+}
+
 em {
 	color:#0b9743;	
 }
