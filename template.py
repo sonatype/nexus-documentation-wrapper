@@ -49,7 +49,7 @@ print ("  Path to index set to: ") + toindex
 for infile in glob.glob( os.path.join(path, '*.html') ):
   print "Reading File: " + infile
   body = open(infile, "r").read()
-  if infile.endswith( 'search.html'):
+  if infile.endswith( '/search.html'):
     t = airspeed.Template(open( wrapperpath + "/search.html", "r").read())
     print( "  search.html replacements" )
   else:
