@@ -1,0 +1,177 @@
+.sonatype-overview-block {
+    background-color: #f1f1f1;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+.sonatype-emphasis .sonatype-overview-block {
+    border: solid 2px #dcd54a;
+}
+
+.sonatype-overview-block .image {
+    padding-left: 1em;
+    padding-top: 1em;
+    padding-right: 1em;
+    text-align: center;
+}
+
+.sonatype-overview-block img {
+    max-width: 100%;
+}
+
+/* Turn the background of alternating overview blocks transparent */
+.left.striped > span > div:nth-child(even) .sonatype-overview-block {
+    background-color: transparent;
+}
+
+/* Turn the background of a specific overview block transparent */
+.nobackground .sonatype-overview-block {
+    background-color: transparent;
+}
+
+@media (min-width: 768px) {
+    .left .sonatype-overview-block {
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+    }
+    .left.top .sonatype-overview-block {
+        align-items: flex-start;
+    }
+    .left .sonatype-overview-block .text {
+        -ms-flex: 1;
+    }
+    .left .sonatype-overview-block .image {
+        flex-shrink: 0;
+    }
+    .left.top .sonatype-overview-block img {
+        padding-top: 1em;
+    }
+}
+
+.left .sonatype-overview-block .image img {
+    max-width: inherit;
+}
+
+.left.nobackground .sonatype-overview-block {
+    padding-top: 1em;
+    margin-top: 1em;
+}
+
+.left.nobackground .sonatype-overview-block .image {
+    padding-top: 0;
+}
+
+.left.nobackground .sonatype-overview-block .image,
+.left.nobackground .sonatype-overview-block .text {
+    padding-left: 0;
+}
+
+.left.nobackground .sonatype-overview-block .image {
+    padding-right: 2em;
+}
+
+.left.nobackground .sonatype-overview-block .text {
+    padding-right: 0;
+}
+
+.left .sonatype-overview-block {
+    text-align: left;
+}
+
+.left .sonatype-overview-block .text h1,
+.left .sonatype-overview-block .text h2,
+.left .sonatype-overview-block .text h3 {
+    margin-top: 0;
+    text-decoration: none;
+}
+
+.left.nobackground.solo .sonatype-overview-block {
+    padding: 0;
+    margin: 0;
+}
+
+.sonatype-overview-block .text {
+    padding: 1em;
+}
+
+.sonatype-overview-block .cta-container {
+    margin-top: 20px;
+}
+
+.sonatype-overview-block .cta-container .sonatype-call-to-action {
+    border-radius: 26px !important;
+    padding: 8px 17px 8px 17px !important;
+    white-space: nowrap;
+    display: inline-block;
+    font-family: "Proxima Nova Semibold";
+}
+
+.sonatype-overview-block .cta-container .sonatype-call-to-action:hover {
+    color: #999b9d;
+}
+
+.sonatype-overview-block .cta-container .sonatype-call-to-action.primary {
+    background-color: #000000;
+    color: #ffffff;
+    margin-right: 5px;
+}
+
+.sonatype-overview-block .cta-container .sonatype-call-to-action.secondary {
+    background-color: transparent;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+.sonatype-overview-block .secondary .cta_button {
+    background-color: transparent !important;
+    color: #000000 !important;
+    border: 1px solid #000000 !important;
+}
+
+.sonatype-default-page .sonatype-overview-block h1,
+.sonatype-default-page .sonatype-overview-block h2,
+.sonatype-default-page .sonatype-overview-block h3 {
+    color: #336699;
+}
+
+.sonatype-repository .sonatype-overview-block h1,
+.sonatype-repository .sonatype-overview-block h2,
+.sonatype-repository .sonatype-overview-block h3 {
+    color: #46956d;
+}
+
+.sonatype-auditor .sonatype-overview-block h1,
+.sonatype-auditor .sonatype-overview-block h2,
+.sonatype-auditor .sonatype-overview-block h3 {
+    color: #885195;
+}
+
+.sonatype-firewall .sonatype-overview-block h1,
+.sonatype-firewall .sonatype-overview-block h2,
+.sonatype-firewall .sonatype-overview-block h3 {
+    color: #6c5896;
+}
+
+.sonatype-lifecycle .sonatype-overview-block h1,
+.sonatype-lifecycle .sonatype-overview-block h2,
+.sonatype-lifecycle .sonatype-overview-block h3 {
+    color: #4f5f98;
+}
+
+.sonatype-error .sonatype-overview-block h1,
+.sonatype-error .sonatype-overview-block h2,
+.sonatype-error .sonatype-overview-block h3 {
+    color: #d54854;
+}
+
+.sonatype-generic .sonatype-overview-block h1,
+.sonatype-generic .sonatype-overview-block h2,
+.sonatype-generic .sonatype-overview-block h3 {
+    color: #6d7073;
+}
+
+.sonatype-overview-block a{
+    color:#369; /* Added by HS SUpport to color links 3/31/16*/
+}

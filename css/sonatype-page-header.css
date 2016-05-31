@@ -1,0 +1,23 @@
+.sonatype-page-header {
+    color: #ffffff;
+    padding: 0;
+}
+
+.sonatype-page-header .sonatype-gradient {
+    padding-top: 3em;
+    padding-left: 4em;
+    padding-right: 4em;
+}
+
+/* Remove excess padding on mobile */
+@media (max-width: 767px) {
+    .sonatype-page-header .sonatype-gradient {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+
+.sonatype-page-header h1 {
+    margin: 0 auto;
+    max-width: 1200px;
+}

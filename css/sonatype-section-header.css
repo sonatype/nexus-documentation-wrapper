@@ -1,0 +1,33 @@
+.sonatype-section-header {
+    margin-top: 2em;
+}
+
+/* Each section of the website has its own distinctive color for H2s */
+
+.sonatype-default-page .sonatype-section-header h2 {
+    color: #336699;
+}
+
+.sonatype-repository .sonatype-section-header h2 {
+    color: #46956d;
+}
+
+.sonatype-auditor .sonatype-section-header h2 {
+    color: #885195;
+}
+
+.sonatype-firewall .sonatype-section-header h2 {
+    color: #6c5896;
+}
+
+.sonatype-lifecycle .sonatype-section-header h2 {
+    color: #4f5f98;
+}
+
+.sonatype-error .sonatype-section-header h2 {
+    color: #d54854;
+}
+
+.sonatype-generic .sonatype-section-header h2 {
+    color: #6d7073;
+}
