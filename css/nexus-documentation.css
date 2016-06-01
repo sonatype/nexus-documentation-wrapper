@@ -1,15 +1,49 @@
 /* CSS for the Asciidoc rendered Nexus Documentation */
 /* @author Manfred Moser */
 
+/* Overall layout of nav on left of content */
 .left-sidebar {
   float: left;
-  width: 290px;
+  width: 300px;
+  border:0px;
   /* border: 1px solid black; */
 }
-
 .content {
   margin-left: 305px;
   /* border: 1px solid black; */
+}
+
+/* Styling for navigation on left */
+.left-sidebar .sidebarTitle {
+  vertical-align:text-top;
+  border-left: 3px solid #f5c649;
+  padding-left: 10px;
+  cursor: pointer;
+}
+.left-sidebar .sidebarTitle:hover {
+  color:#888a85;
+  text-decoration:underline;
+  cursor: pointer;
+}
+.left-sidebar .sidebar {
+  margin-left:20px;
+  vertical-align:text-top;
+}
+.left-sidebar .sidebar a, a:active, a:focus {
+  color:#000000;
+  text-decoration:none;
+  cursor: pointer;
+}
+.left-sidebar a:hover {
+  color:#888a85;
+  text-decoration:underline;
+  cursor: pointer;
+}
+.sidebarSection {
+ display: none;
+}
+.sidebarSection.default {
+ display: block;
 }
 
 /* --- Sub Nav Styling --- */
