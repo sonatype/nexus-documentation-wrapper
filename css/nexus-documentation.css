@@ -46,6 +46,15 @@
  display: block;
 }
 
+
+/* Various customizations for content block from asciidoc */
+
+.content pre,code {
+  padding: 0.5em;
+  background-color: #f5f5f5;
+  white-space: pre-wrap;
+}
+
 /* override the clear:both element in the generate source code to avoid large whitespace after ToC for a chapter */
 .content .title {
   clear: none !important;
