@@ -46,6 +46,10 @@
  display: block;
 }
 
+/* override the clear:both element in the generate source code to avoid large whitespace after ToC for a chapter */
+.content .title {
+  clear: none !important;
+}
 /* --- Sub Nav Styling --- */
 #nav-sub-block {
     margin: 0px;
