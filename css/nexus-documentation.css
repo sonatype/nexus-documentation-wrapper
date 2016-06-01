@@ -1,0 +1,10 @@
+.left-sidebar {
+  float: left;
+  width: 290px;
+  border: 1px solid black; 
+}
+
+.content {
+  margin-left: 305px;
+  border: 1px solid black;
+}
