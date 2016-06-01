@@ -71,3 +71,73 @@ ul#nav-sub li.first {
 ul#nav-sub li.last {
   float:right;
 }
+
+/* --- Admonitionblock Styling --- */
+div.warning, div.caution, div.important, div.note, div.tip {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-right: 0px !important;
+  padding: 7px 7px 7px 21px;
+}
+div.warning h3, div.caution h3, div.important h3, div.note h3, div.tip h3 {
+  margin-bottom: 3px;
+  margin-top: 3px;
+  padding: 0px;
+}
+div.warning p, div.caution p, div.important p, div.note p, div.tip p {
+  margin: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+div.warning table, div.caution table, div.important table, div.note table, div.tip table {
+  margin: 5px;
+}
+/** control image size to the original image size */
+div.warning img, div.caution img, div.important img, div.note img, div.tip img {
+  height: 48px;
+  width: 48px;
+  max-width: none;
+}
+.warning {
+  background: #f5d9d6;
+  border: 2px solid #ccc;
+  border-color: #d04437;
+}
+.warning h3 {
+  color: #d04437;
+}
+.caution {
+  background: #f5d9d6;
+  border: 2px solid #ccc;
+  border-color: #d04437;
+}
+.caution h3 {
+  color: #d04437;
+}
+.important {
+  background: #dfd;
+  border: 2px solid #ccc;
+  border-color: #91c89c;
+}
+.important h3 {
+  color: #91c89c;
+}
+.tip {
+  background: #dfd;
+  border: 2px solid #ccc;
+  border-color: #91c89c;
+}
+.tip h3 {
+  color: #91c89c;
+}
+.note {
+  background: #dfd;
+  border: 2px solid #ccc;
+  border-color: #91c89c;
+}
+.note h3 {
+  color: #91c89c;
+}
