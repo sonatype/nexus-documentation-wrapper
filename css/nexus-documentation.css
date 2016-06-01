@@ -1,10 +1,35 @@
+/* CSS for the Asciidoc rendered Nexus Documentation */
+/* @author Manfred Moser */
+
 .left-sidebar {
   float: left;
   width: 290px;
-  border: 1px solid black; 
+  /* border: 1px solid black; */
 }
 
 .content {
   margin-left: 305px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+}
+
+/* --- Sub Nav Styling --- */
+#nav-sub-block {
+    margin: 0px;
+    padding: 0px;
+}
+ul#nav-sub  {
+    margin: 0px;
+    padding: 0px;
+    text-align:center;
+}
+ul#nav-sub li {
+    text-align: center;
+    list-style-type: none;
+    display: inline-block;
+}
+ul#nav-sub li.first {
+  float:left;
+}
+ul#nav-sub li.last {
+  float:right;
 }
