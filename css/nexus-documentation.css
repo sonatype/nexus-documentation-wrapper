@@ -59,6 +59,11 @@
 .content .title {
   clear: none !important;
 }
+.content .figure {
+ text-align: center;
+}
+
+
 /* --- Sub Nav Styling --- */
 #nav-sub-block {
     margin: 0px;
