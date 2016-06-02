@@ -5,12 +5,6 @@
 /* 'custom/styles/default/hs_default_custom_style.css'                      */
 /****************************************************************************/
 
-/* Get Proxima Nova */
-@import url("https://cdn2.hubspot.net/hubfs/1958393/Fonts/proximanova.css");
-
-/* Get Font Awesome */
-@import url("https://cdn2.hubspot.net/hubfs/1958393/Fonts/font-awesome/css/font-awesome.css");
-
 body {
     /* Force background colors to bleed to the edge of the screen */
     margin: 0;
