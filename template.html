@@ -276,7 +276,20 @@
     </div>
     <br /><br /><br /><br /><br /><br />
   </div>
-<div class="content">${body}</div>
+<div class="content">
+  <div class="search-box" style="display: ${searchdisplay};">
+    <form action="./search.html" novalidate="novalidate">
+      <input type="hidden" name="cx" value="${googleSearchToken}">
+      <input type="hidden" name="ie" value="ISO-8859-1">
+      <input type="hidden" name="cof" value="FORID:10">
+      <input type="text" name="q" placeholder="Search" class="text-input" value="">
+      <input type="submit" value="" class="glyphicons-icon search">
+    </form>
+  </div>
+  <div>
+    ${body}
+  </div>
+</div>
 
 </div><!--end layout-widget-wrapper -->
 </div><!--end widget-span -->
