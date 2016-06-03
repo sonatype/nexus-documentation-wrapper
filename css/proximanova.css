@@ -19,50 +19,50 @@
 
 @font-face {
   font-family: 'Proxima Nova';
-  src: url(https://cdn2.hubspot.net/hubfs/1958393/Fonts/ProximaNova-Bold-webfont.eot),
-       url(https://cdn2.hubspot.net/hubfs/1958393/Fonts/ProximaNova-Bold-webfont.woff2) format('woff2'),
-       url(https://cdn2.hubspot.net/hubfs/1958393/Fonts/ProximaNova-Bold-webfont.woff) format('woff'),
-       url(https://cdn2.hubspot.net/hubfs/1958393/Fonts/ProximaNova-Bold-webfont.ttf) format('truetype'),
-       url(https://cdn2.hubspot.net/hubfs/1958393/Fonts/ProximaNova-Bold-webfont.svg#proxima_nova_rgbold) format('svg');
+  src: url('../fonts/ProximaNova-Bold-webfont.eot'),
+       url('../fonts/ProximaNova-Bold-webfont.woff2') format('woff2'),
+       url('../fonts/ProximaNova-Bold-webfont.woff') format('woff'),
+       url('../fonts/ProximaNova-Bold-webfont.ttf') format('truetype'),
+       url('../fonts/ProximaNova-Bold-webfont.svg#proxima_nova_rgbold') format('svg');
   font-weight: bold;
 }
 
 @font-face {
   font-family: 'Proxima Nova';
-  src: url(https://cdn2.hubspot.net/hubfs/1958393/Fonts/ProximaNova-Reg-webfont.eot),
-       url(https://cdn2.hubspot.net/hubfs/1958393/Fonts/ProximaNova-Reg-webfont.woff2) format('woff2'),
-       url(https://cdn2.hubspot.net/hubfs/1958393/Fonts/ProximaNova-Reg-webfont.woff) format('woff'),
-       url(https://cdn2.hubspot.net/hubfs/1958393/Fonts/ProximaNova-Reg-webfont.ttf) format('truetype'),
-       url(https://cdn2.hubspot.net/hubfs/1958393/Fonts/ProximaNova-Reg-webfont.svg) format('svg');
+  src: url('../fonts/ProximaNova-Reg-webfont.eot'),
+       url('../fonts/ProximaNova-Reg-webfont.woff2') format('woff2'),
+       url('../fonts/ProximaNova-Reg-webfont.woff') format('woff'),
+       url('../fonts/ProximaNova-Reg-webfont.ttf') format('truetype'),
+       url('../fonts/ProximaNova-Reg-webfont.svg') format('svg');
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'Proxima Nova Semibold';
-  src: url(https://cdn2.hubspot.net/hubfs/1958393/Fonts/ProximaNova-Sbold-webfont.eot),
-       url(https://cdn2.hubspot.net/hubfs/1958393/Fonts/ProximaNova-Sbold-webfont.woff2) format('woff2'),
-       url(https://cdn2.hubspot.net/hubfs/1958393/Fonts/ProximaNova-Sbold-webfont.woff) format('woff'),
-       url(https://cdn2.hubspot.net/hubfs/1958393/Fonts/ProximaNova-Sbold-webfont.ttf) format('truetype'),
-       url(https://cdn2.hubspot.net/hubfs/1958393/Fonts/ProximaNova-Sbold-webfont.svg#proxima_nova_ltsemibold) format('svg');
+  src: url('../fonts/ProximaNova-Sbold-webfont.eot'),
+       url('../fonts/ProximaNova-Sbold-webfont.woff2') format('woff2'),
+       url('../fonts/ProximaNova-Sbold-webfont.woff') format('woff'),
+       url('../fonts/ProximaNova-Sbold-webfont.ttf') format('truetype'),
+       url('../fonts/ProximaNova-Sbold-webfont.svg#proxima_nova_ltsemibold') format('svg');
   font-weight: bold;
 }
 
 @font-face {
   font-family: 'Proxima Nova Thin';
-  src: url(https://cdn2.hubspot.net/hubfs/1958393/Fonts/ProximaNova-Thin-webfont.eot),
-       url(https://cdn2.hubspot.net/hubfs/1958393/Fonts/ProximaNova-Thin-webfont.woff2) format('woff2'),
-       url(https://cdn2.hubspot.net/hubfs/1958393/Fonts/ProximaNova-Thin-webfont.woff) format('woff'),
-       url(https://cdn2.hubspot.net/hubfs/1958393/Fonts/ProximaNova-Thin-webfont.ttf) format('truetype'),
-       url(https://cdn2.hubspot.net/hubfs/1958393/Fonts/ProximaNova-Thin-webfont.svg#proxima_nova_ththin) format('svg');
+  src: url('../fonts/ProximaNova-Thin-webfont.eot'),
+       url('../fonts/ProximaNova-Thin-webfont.woff2') format('woff2'),
+       url('../fonts/ProximaNova-Thin-webfont.woff') format('woff'),
+       url('../fonts/ProximaNova-Thin-webfont.ttf') format('truetype'),
+       url('../fonts/ProximaNova-Thin-webfont.svg#proxima_nova_ththin') format('svg');
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'Proxima Nova Light';
-  src: url(https://cdn2.hubspot.net/hubfs/1958393/Fonts/ProximaNova-Light-webfont.eot),
-       url(https://cdn2.hubspot.net/hubfs/1958393/Fonts/ProximaNova-Light-webfont.woff2) format('woff2'),
-       url(https://cdn2.hubspot.net/hubfs/1958393/Fonts/ProximaNova-Light-webfont.woff) format('woff'),
-       url(https://cdn2.hubspot.net/hubfs/1958393/Fonts/ProximaNova-Light-webfont.ttf) format('truetype'),
-       url(https://cdn2.hubspot.net/hubfs/1958393/Fonts/ProximaNova-Light-webfont.svg) format('svg');
+  src: url('../fonts/ProximaNova-Light-webfont.eot'),
+       url('../fonts/ProximaNova-Light-webfont.woff2') format('woff2'),
+       url('../fonts/ProximaNova-Light-webfont.woff') format('woff'),
+       url('../fonts/ProximaNova-Light-webfont.ttf') format('truetype'),
+       url('../fonts/ProximaNova-Light-webfont.svg') format('svg');
   font-weight: normal;
 }
