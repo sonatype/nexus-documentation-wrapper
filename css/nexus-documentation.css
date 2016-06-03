@@ -6,18 +6,23 @@
   float: left;
   width: 300px;
   border:0px;
-  /* border: 1px solid black; */
 }
 .content {
   margin-left: 305px;
-  /* border: 1px solid black; */
 }
 
 /* Styling for navigation on left */
+.left-sidebar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-left: 2px solid #000000;
+  background-color: #f1f1f1;
+}
 .left-sidebar .sidebarTitle {
   vertical-align:text-top;
-  border-left: 3px solid #f5c649;
   padding-left: 10px;
+  padding-bottom: 5px;
+  padding-top: 3px;
   cursor: pointer;
 }
 .left-sidebar .sidebarTitle:hover {
@@ -26,8 +31,9 @@
   cursor: pointer;
 }
 .left-sidebar .sidebar {
-  margin-left:20px;
+  padding-left:20px;
   vertical-align:text-top;
+  background-color: white;
 }
 .left-sidebar .sidebar a, a:active, a:focus {
   color:#000000;
@@ -38,6 +44,10 @@
   color:#888a85;
   text-decoration:underline;
   cursor: pointer;
+}
+.left-sidebar .sidebarServer {
+  padding-left:15px;
+  vertical-align:text-top;
 }
 .sidebarSection {
  display: none;
