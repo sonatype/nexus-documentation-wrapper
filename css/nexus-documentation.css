@@ -4,11 +4,9 @@
 /* Overall layout of nav on left of content */
 .left-sidebar {
   float: left;
-  width: 300px;
+  width: 285px;
+  margin-right: 10px;
   border:0px;
-}
-.content {
-  margin-left: 305px;
 }
 
 /* Styling for navigation on left */
