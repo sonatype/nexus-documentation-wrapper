@@ -88,7 +88,7 @@ h3 {
 }
 
 .sonatype-striped-background {
-    background-image: url(http://cdn2.hubspot.net/hubfs/1958393/Assets/pattern-stripes.png);
+    background-image: url('../images/pattern-stripes.png');
 }
 
 /* Each section of the website has its own distinctive background color */
