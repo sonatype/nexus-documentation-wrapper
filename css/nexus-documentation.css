@@ -8,6 +8,9 @@
   margin-right: 10px;
   border:0px;
 }
+.content {
+  margin-left: 295px;
+}
 
 /* Styling for navigation on left */
 .left-sidebar {
@@ -44,8 +47,9 @@
   cursor: pointer;
 }
 .left-sidebar .sidebarServer {
-  padding-left:15px;
+  padding-left:10px;
   vertical-align:text-top;
+  background-color: white;
 }
 .sidebarSection {
  display: none;
