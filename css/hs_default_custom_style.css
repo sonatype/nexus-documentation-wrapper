@@ -125,33 +125,6 @@ h3 {
     background-position: center;
     background-size: cover;
 }
-.sonatype-earth-at-night {
-    background-image: url(http://cdn2.hubspot.net/hubfs/1958393/Assets/earth_at_night.jpg);
-    color: #ffffff;
-}
-.sonatype-earth-at-night h1 {
-    color: #ffffff !important;
-}
-.sonatype-earth-at-night .sonatype-call-to-action.primary {
-    background-color: #ffffff !important;
-    color: #000000 !important;
-}
-.sonatype-earth-at-night .sonatype-call-to-action.secondary {
-    color: #ffffff !important;
-    border: 1px solid #ffffff !important;
-}
-.sonatype-earth-at-night .cta_button {
-    background-color: #ffffff !important;
-    color: #000000 !important;
-}
-.sonatype-team {
-    background-image: url(http://cdn2.hubspot.net/hubfs/1958393/Team_Sonatype.jpg);
-    height: 400px;
-}
-.sonatype-datacenter {
-    background-image: url(http://cdn2.hubspot.net/hubfs/1958393/Assets/datacenter.png);
-}
-
 /* Map gradients to the background color for that section of the website */
 
 .sonatype-default-page .sonatype-gradient {
