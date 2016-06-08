@@ -76,6 +76,15 @@
 .content .figure {
  text-align: center;
 }
+.content a, a:active, a:focus, a:visited {
+  color:#336699;
+  text-decoration:none;
+  cursor:pointer;
+}
+.content a:hover {
+  text-decoration:underline;
+}
+
 .content .blockquote {
   background-color: #eff0f1;
   padding-left: 10px;
