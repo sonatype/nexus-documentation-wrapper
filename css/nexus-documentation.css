@@ -212,3 +212,41 @@ div.warning img, div.caution img, div.important img, div.note img, div.tip img {
 .search-box input[type="submit"] {
   width:40px;
 }
+
+/* --- Search Results Page Styles --- */
+
+.cse .gsc-control-cse, .gsc-control-cse {
+  padding:0em;
+}
+.gsc-adBlock {
+    padding-bottom: 5px;
+    display: none;
+}
+.gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+  padding-left:0px;
+  padding-right:0px;
+}
+.gsc-control-cse, .gsc-control-cse .gsc-table-result {
+  font-size:14px; 
+}
+.gs-webResult .gs-snippet, .gs-imageResult .gs-snippet, .gs-fileFormatType {
+    color: #666;
+    font-size: 14px;
+}
+.gsc-results .gsc-cursor-box {
+    margin:10px 0px;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-page {
+  border-color: #FFF;
+  background-color: #FFF;
+  color: #00C;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-current-page {
+    border-color: #FFF;
+    background-color: #FFF;
+    color: #00C;
+}
+.gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+    padding-left: 0px;
+    padding-right: 0px;
+}
