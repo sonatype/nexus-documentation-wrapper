@@ -5,3 +5,4 @@ template.html
 .git
 airspeed
 runLocalServer.sh
+*.old
