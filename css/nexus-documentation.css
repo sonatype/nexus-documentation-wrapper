@@ -8,6 +8,7 @@
 }
 .left-sidebar {
   min-width: 255px;
+  max-width: 255px;
   flex: 1;
   margin-right: 10px;
 }
