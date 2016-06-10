@@ -89,6 +89,14 @@
   padding-bottom: 10px;
 }
 
+.docContent .authorgroup br {
+  display:none;
+}
+
+.docContent .author {
+  display: block;
+}
+
 /* --- Sub Nav Styling --- */
 #nav-sub-block {
     margin: 0px;
