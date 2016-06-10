@@ -2,14 +2,16 @@
 /* @author Manfred Moser */
 
 /* Overall layout of nav on left of content */
+.flexbox {
+  display: flex;
+  align-items: flex-start;
+}
 .left-sidebar {
-  float: left;
-  width: 255px;
+  min-width: 255px;
+  flex: 1;
   margin-right: 10px;
-  border:0px;
 }
 .docContent {
-  margin-left: 265px;
 }
 
 /* Styling for navigation on left */
