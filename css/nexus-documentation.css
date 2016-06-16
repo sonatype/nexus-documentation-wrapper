@@ -232,7 +232,7 @@ div.warning img, div.caution img, div.important img, div.note img, div.tip img {
 */
 
 .gsc-adblock {
-  display: none;
+  display: none !important;
 }
 .gsc-results-wrapper-overlay, .gsc-results-wrapper-visible, .gsc-search-button, .gsc-search-button-v2 {
   box-sizing: content-box;
