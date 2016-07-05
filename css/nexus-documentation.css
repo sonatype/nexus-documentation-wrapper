@@ -94,29 +94,23 @@
   display:none;
 }
 
-.docContent .author {
+.docContent .author {cal
   display: block;
 }
 
 /* --- Sub Nav Styling --- */
-#nav-sub-block {
-    margin: 0px;
-    padding: 0px;
+.nav-sub .nav-toc {
+  text-align: center;
 }
-ul#nav-sub  {
-    margin: 0px;
-    padding: 0px;
-    text-align:center;
+.nav-sub ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
 }
-ul#nav-sub li {
-    text-align: center;
-    list-style-type: none;
-    display: inline-block;
-}
-ul#nav-sub li.first {
+.nav-sub li.first {
   float:left;
 }
-ul#nav-sub li.last {
+.nav-sub li.last {
   float:right;
 }
 
@@ -195,7 +189,6 @@ div.warning img, div.caution img, div.important img, div.note img, div.tip img {
 
 .search-box {
   width: 100%;
-  height: 50pt;
   text-align: right;
 }
 .search-box input[type="text"] {
