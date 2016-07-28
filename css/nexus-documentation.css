@@ -94,8 +94,9 @@
   display:none;
 }
 
-.docContent .author {cal
+.docContent .author {
   display: block;
+  clear: left;
 }
 
 /* --- Sub Nav Styling --- */
