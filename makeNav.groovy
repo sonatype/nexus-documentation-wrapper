@@ -32,4 +32,6 @@ def newSearch = new File('search.html')
 def searchPieces = ['header2nav.html' , 'nav.html' , 'nav2body.html', 'bodySearch.html', 'body2footer.html']
 searchPieces.each{ newSearch.append(new File(it).getText()) }
 
+// Need to add the deletion of the temporary nav.html file or ignore it in the template.py file.. otherwise it fails, maybe also ensure the other files dont leak into the output 
+
 println "Done"
