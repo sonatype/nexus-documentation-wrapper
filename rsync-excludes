@@ -2,7 +2,9 @@ rsync-excludes
 template.py
 apply-template.sh
 template.html
-.git
+n.git
 airspeed
 runLocalServer.sh
 *.old
+part-*.html
+makeTemplates.groovy

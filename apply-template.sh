@@ -28,6 +28,9 @@ echo "  googleSearchToken: ${googleSearchToken}"
 echo "  version: ${version}"
 echo "  searchUrl: ${searchUrl}" 
 
+echo "Creating template files"
+groovy "${dir}/makeTemplates.groovy" $path
+
 # copy all content apart from the excluded stuff ;-) 
 echo "  Copying template resources" 
 rsync -a --exclude-from="$dir/rsync-excludes" $dir/* $path
