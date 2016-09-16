@@ -29,7 +29,7 @@ echo "  version: ${version}"
 echo "  searchUrl: ${searchUrl}" 
 
 echo "Creating template files"
-groovy "${dir}/makeTemplates.groovy" $path
+groovy "${dir}/makeTemplates.groovy" "$product" "$path"
 
 # copy all content apart from the excluded stuff ;-) 
 echo "  Copying template resources" 

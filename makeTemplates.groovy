@@ -9,7 +9,20 @@ println "$pre Running script in $wrapperDir"
 
 //scriptFile = getClass().protectionDomain.codeSource.location.path
 
-String path = args[0]
+String product = args[0]
+String webcontext
+println "$pre Product $product"
+if (product.contains("IQ")) {
+  webcontext = "sonatype-clm-book"
+} else {
+  webcontext = "nexus-book"
+}
+println "$pre Webcontext $webcontext"
+
+String path = args[1]
+println "$pre Target path $path"
+String context = webcontext + "/" + path.substring(path.lastIndexOf("site/")+5, path.length())
+println "$pre Target context $context"
 File index = new File(path + '/index.html')
 
 parser=new XmlSlurper()
@@ -30,7 +43,7 @@ nav.append("<div class=\"sidebarSection\">")
 
 def linkCount = 0
 doc.depthFirst().collect { it }.findAll { it.name() == "span" && it.@class.text()=="chapter"}.each {
-    nav.append("<div class=\"sidebar\"><a href=\"\${toindex}nexus-book/reference/${it.a.@href}\">${it}</a></div>${newline}")
+    nav.append("<div class=\"sidebar\"><a href=\"\${toindex}${context}/${it.a.@href}\">${it}</a></div>${newline}")
     println "$pre added $it"
     linkCount++
 }
