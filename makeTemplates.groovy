@@ -37,8 +37,12 @@ new PrintWriter(wrapperDir + 'part-nav.html').close()
 // open the file for writing
 File nav = new File(wrapperDir + 'part-nav.html')
 
-nav.append("<div class=\"sidebarTitle\" id=\"nxDocsSectNav\"><b>\${product} \${version}</b></div>")
-nav.append("<div class=\"sidebarSection\">")
+if (path.contains("release-notes")) {
+  nav.append("<div class=\"sidebarTitle\" id=\"nxDocsSectNav\"><b>IQ Release Notes</b></div>${newline}")
+} else {
+  nav.append("<div class=\"sidebarTitle\" id=\"nxDocsSectNav\"><b>\${product} \${version}</b></div>${newline}")
+}
+nav.append("<div class=\"sidebarSection\">${newline}")
 
 def linkCount = 0
 doc.depthFirst().collect { it }.findAll { it.name() == "span" && it.@class.text()=="chapter"}.each {
@@ -46,7 +50,7 @@ doc.depthFirst().collect { it }.findAll { it.name() == "span" && it.@class.text(
     println "$pre added $it"
     linkCount++
 }
-nav.append("</div>")
+nav.append("</div>${newline}")
 println "$pre Added $linkCount links"
 
 if (linkCount == 0) {
