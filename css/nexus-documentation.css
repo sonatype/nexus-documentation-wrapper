@@ -7,14 +7,20 @@
   align-items: flex-start;
 }
 .left-sidebar {
-  min-width: 255px;
-  max-width: 255px;
+  min-width: 275px;
+  max-width: 275px;
   flex: 1;
   margin-right: 10px;
 }
 .docContent {
 }
 
+.sonatype-body {
+  padding-top: 2em;
+  padding-right: 2em;
+  padding-bottom: 4em;
+  padding-left: 2em;
+}
 /* Styling for navigation on left */
 .left-sidebar {
   padding-top: 10px;

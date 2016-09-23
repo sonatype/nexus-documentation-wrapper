@@ -28,6 +28,19 @@ echo "  googleSearchToken: ${googleSearchToken}"
 echo "  version: ${version}"
 echo "  searchUrl: ${searchUrl}" 
 
+echo "Checking for/Setting up Groovy support"
+# Normal developer should have groovy on PATH, for bamboo we set it up her
+if [ -x "$(command -v groovy)" ]; then
+  echo 'groovy found on PATH.'
+else
+  echo 'On Bamboo/Zion Adding groovy to PATH.'
+  export PATH=/opt/zion/bundles/tools/groovy/groovy-2.4.3/bin/:$PATH
+fi
+groovy -v
+
+echo "Creating template files"
+groovy "${dir}/makeTemplates.groovy" "$product" "$path"
+
 # copy all content apart from the excluded stuff ;-) 
 echo "  Copying template resources" 
 rsync -a --exclude-from="$dir/rsync-excludes" $dir/* $path
