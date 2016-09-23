@@ -28,6 +28,15 @@ echo "  googleSearchToken: ${googleSearchToken}"
 echo "  version: ${version}"
 echo "  searchUrl: ${searchUrl}" 
 
+echo "Checking for/Setting up Groovy support"
+if [ -x "$(command -v groovy)" ]; then
+  echo 'groovy found on PATH.'
+else
+  echo 'On Bamboo/Zion Adding groovy to PATH.'
+  export PATH=/opt/zion/bundles/tools/groovy/groovy-2.4.3/bin/:$PATH
+fi
+groovy -v
+
 echo "Creating template files"
 groovy "${dir}/makeTemplates.groovy" "$product" "$path"
 
