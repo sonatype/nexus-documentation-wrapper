@@ -3,6 +3,6 @@
 .iml
 
 # ignoring generated files
-template.html
+#template.html
 search.html
 part-nav.html
