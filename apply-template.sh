@@ -29,6 +29,7 @@ echo "  version: ${version}"
 echo "  searchUrl: ${searchUrl}" 
 
 echo "Checking for/Setting up Groovy support"
+# Normal developer should have groovy on PATH, for bamboo we set it up her
 if [ -x "$(command -v groovy)" ]; then
   echo 'groovy found on PATH.'
 else
