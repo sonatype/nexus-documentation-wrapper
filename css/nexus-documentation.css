@@ -78,7 +78,7 @@
 /* override the clear:both element in the generate source code to avoid large whitespace after ToC for a chapter */
 
 .docContent .title {
-  clear: none !important;
+  clear: both !important;
 }
 
 .docContent .figure {
