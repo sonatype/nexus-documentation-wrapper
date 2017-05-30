@@ -21,6 +21,15 @@
   padding-bottom: 4em;
   padding-left: 2em;
 }
+
+/*Styling for redirect banner */
+
+.redirect-banner {
+  padding: 10px;
+  border: 1px solid #888a85;
+  background-color: #f1f1f1;
+}
+
 /* Styling for navigation on left */
 .left-sidebar {
   padding-top: 10px;
