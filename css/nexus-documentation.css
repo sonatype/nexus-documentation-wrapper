@@ -22,14 +22,6 @@
   padding-left: 2em;
 }
 
-/*Styling for redirect banner */
-
-.redirect-banner {
-  padding: 10px;
-  border: 1px solid #888a85;
-  background-color: #f1f1f1;
-}
-
 /* Styling for navigation on left */
 .left-sidebar {
   padding-top: 10px;
@@ -130,6 +122,21 @@
   float:right;
 }
 
+/* --- Redirect Banner Styling --- */
+.redirect {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding: 15px 15px 15px 50px;
+  background: #ffffe0;
+  border: 2px solid #ccc;
+  border-color: #ffc125;
+  background-image: url("../images/caution.png");
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
 /* --- Admonitionblock Styling --- */
 div.warning, div.caution, div.important, div.note, div.tip {
   -webkit-border-radius: 5px;
@@ -198,7 +205,6 @@ div.warning img, div.caution img, div.important img, div.note img, div.tip img {
 .note h3 {
   color: #91c89c;
 }
-
 
 
 /* --- Search Box Styling --- */
